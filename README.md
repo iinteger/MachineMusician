@@ -2,9 +2,7 @@
 
 #### 악보 인식 프로그램 개발과정 기록
 
-
-
-
+</br>
 
 ## 21. 07. 28
 * 가장 중요한 2가지 Task를 선정
@@ -18,12 +16,14 @@
 * 임시표, 이음줄 등의 추가 요소들은 위 작업을 완성하고 보완할 예정
 
   
+</br>
 
 ## 21. 08 .07
 * Detection 알고리즘에 [EfficientDet](https://github.com/xuannianz/EfficientDet)을 사용하고자 오픈소스를 실행하였으나 metric score가 NaN으로 출력되며 학습이 진행되지 않음
 * Gradient Exploding을 의심하여 lr을 0에 가깝게 줄이고, BN 레이어를 추가하는 등의 시도를 하였으나 결과 변동 없음
 
 
+</br>
 
 ## 21. 08 .09
 
@@ -41,7 +41,7 @@
 
 * 오선이 있는 악보를 직접 라벨링하여 데이터셋을 구성함. 라벨링은 [makesense.ai](https://www.makesense.ai/)를 사용
 
-  <img src="./images/val_batch0_labels.jpg" alt="라벨링 된 이미지" style="zoom: 50%;" />
+  <img src="./images/val_batch0_labels.jpg" alt="라벨링 된 이미지" width="40%" />
 
 
 
@@ -49,15 +49,15 @@
 
   1. 학습 데이터에 대한 추론 결과
 
-     <img src="./images/val_batch0_pred.jpg" alt="라벨링 된 이미지" style="zoom: 50%;" />
+     <img src="./images/val_batch0_pred.jpg" alt="라벨링 된 이미지" width="40%" />
 
      
 
   2. 테스트 데이터에 대한 추론 결과
 
-<img src="./images/score1.jpg" alt="라벨링 된 이미지" style="zoom: 50%;" />
+<img src="./images/score1.jpg" alt="라벨링 된 이미지" width="40%" />
 
-<img src="./images/test2.jpg" alt="라벨링 된 이미지" style="zoom: 50%;" />
+<img src="./images/test2.jpg" alt="라벨링 된 이미지" width="40%" />
 
 * 추론 결과, 간단한 악보에는 높은 인식률을 보임
 * 두번째 예제에서는 인식이 되지 않은 음표가 보이며, 특히 꼬리가 아래를 향하는 음표들이 인식되지 않았음. default Augmentation setting에서 Rotation과 Verttical flip이 적용되지 않았음을 확인하였고, 적용되도록 설정
